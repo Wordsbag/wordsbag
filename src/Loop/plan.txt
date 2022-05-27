@@ -1,0 +1,20 @@
+
+1 /// Loop lezm tkun 7adhra kemla (loop of 4 steps of 12 words)
+
+2 // Start with one word and few design and few animations to get the loop done for the first word 
+
+3 // make a little design and animation for all the screens of the loop
+
+4 // screen to add the word and then add it to redux to start the loop
+ 
+// Very Important Update is sometimes there is user would to create a big collection of words with specific goal like exam language test extra and start practice them we can give them this feature by adding big list title and description and notes and give them the possibilite to practice with our quiz system
+
+ so now w have 12 words to start the loop :
+
+ allWords : [
+     wordID
+ ]
+
+ [word1, word2, ...]
+
+ 

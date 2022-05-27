@@ -1,0 +1,96 @@
+// data structure for Quiz Screen
+
+data = [
+  {
+    allSavedOnes: {
+      ids: [22, 33, 44], // ids examples
+    },
+  },
+];
+
+//  Verse Example : "Ni ö Jwøki ni cwøl kuna en maal ni maal. Ni tïm pinynyi ni da abøøya ka amöölla."
+
+//  WordToExtract : "cwøl kuna"
+
+suggestion: [
+  {
+    id: 1,
+    isTheTrueOne: true,
+    word: 'cwøl kuna',
+  },
+  {
+    id: 2,
+    isTheTrueOne: false,
+    word: 'pinynyi',
+  },
+  {
+    id: 3,
+    isTheTrueOne: false,
+    word: 'abøøya',
+  },
+];
+
+data = [
+
+
+
+  {
+    wordsHezmet: [
+      {
+        wordHezma,
+        wordHezmaID,
+        wordHezmaTimeStamp,
+        stepReached
+      },
+    ],
+  },
+
+
+
+];
+
+
+ luser bch ychuf 7ezmtt lyom o l7ezmet li fetouu lkol with stpes progress indicateur so kul 7ezma lezm nzidoha win wsal luser tao fi steps
+
+// steps conception : 
+
+// we have 3 words * 4 = 12 words per wordHezma
+
+// that's mean steps = 100 / 12 for the 4 stages of words discovring and then the random quiz to practise session 
+
+
+
+// that's mean if it's 100/12 * 12 so we reach the random tests step
+
+next steps :
+  -/- fix why first word repeat  //DONE
+  -/- make the progress of 3 * 4 words work  //DONE
+  -/- build screen between each 3 words to inform the user where he is now //DONE
+  -/- build last screen to go to the random test to show on the end of the loop //DONE
+  -/- add the sound for each words //DONE
+  -/- ** Conception for the rest of the scope of the work  REDUX + FIREBASE + LOCAL_STORAGE !!!
+  -/- build the cards screen to add words dynamicaly
+  -/- work with local storage to store user data locally
+  -/- integrate firebase and syncronize it with local db
+  -/- work with static management with redux and static component
+  -/- build the custom work builder screen
+
+
+
+Design :: 
+ -*- wordOutro Page Redesign
+ -*- +3 Words Success Page Redesign
+ -*- Final Page Before Random Test : after Loop of 12 words
+
+
+
+
+
+Other Conception : 
+
+for the first screen we need to show the user some words of all the words that we have in our database and this need to be handled for every time the user see this screen which words need to be showen
+
+
+database :{
+  id:
+}
