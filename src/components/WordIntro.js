@@ -18,6 +18,7 @@ import {
   goSuggCardBuilder,
 } from '../redux/Loop/loop.actions';
 import {useDispatch, useSelector} from 'react-redux';
+import LottieView from 'lottie-react-native';
 const mapState = ({loop}) => ({
   ourStep: loop.ourStep,
   wordNow: loop.wordNow,
@@ -61,6 +62,7 @@ const WordIntro = ({ourAudio}) => {
   const windowHeight = Dimensions.get('window').height;
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const transalteAnim = useRef(new Animated.Value(-windowWidth)).current;
+  const animElement = useRef();
   // const [transalteAnim, setTranslateAnim] = useState(
   //   new Animated.Value(-windowWidth),
   // );
@@ -70,6 +72,7 @@ const WordIntro = ({ourAudio}) => {
   // }, [loaded]);
 
   useEffect(() => {
+    // animElement.play();
     translateTo();
     playSound();
     console.log('Where we are now :', wordIndice);
@@ -126,14 +129,36 @@ const WordIntro = ({ourAudio}) => {
     <Animated.View
       style={[
         styles.container,
+
         {
+          // elevation: 6,
           opacity: fadeAnim,
           transform: [{translateX: transalteAnim}],
         },
       ]}>
-      <View style={{flex: 3}}>
+      <LottieView
+        ref={animElement}
+        source={require('../assets/animations/lottieanim.json')}
+        autoPlay
+        loop
+        style={{
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          elevation: -6,
+          zIndex: -6,
+        }}
+      />
+      <View
+        style={{
+          flex: 3,
+          width: '100%',
+        }}>
         <StatusBar hidden />
         {/* The Language Indicator */}
+
         <View style={styles.languageIndicator}>
           <Image
             style={styles.languageFlagImg}

@@ -1,0 +1,36 @@
+[
+    {
+        "arabic":{
+            "word":"",
+            "example":"",
+            "wordAudio":""
+        },
+        "french":{
+            "word":"",
+            "example":"",
+            "wordAudio":""
+        },
+        "english":{
+            "word":"",
+            "example":"",
+            "wordAudio":""
+        },
+        "german":{
+            "word":"",
+            "example":"",
+            "wordAudio":""
+        },
+        "italian":{
+            "word":"",
+            "example":"",
+            "wordAudio":""
+        },
+        "spanish":{
+            "word":"",
+            "example":"",
+            "wordAudio":""
+        },
+        "wordImage":"imageUrl",
+        "level":3
+    }
+]
