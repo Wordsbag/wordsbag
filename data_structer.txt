@@ -51,11 +51,11 @@ next steps :
   -/- build screen between each 3 words to inform the user where he is now //DONE
   -/- build last screen to go to the random test to show on the end of the loop //DONE
   -/- add the sound for each words //DONE
-  -/- ** Conception for the rest of the scope of the work  REDUX + FIREBASE + LOCAL_STORAGE !!!
-  -/- build the cards screen to add words dynamicaly
+  -/- ** Conception for the rest of the scope of the work  REDUX + FIREBASE + LOCAL_STORAGE !!! //DONE
+  -/- build the cards screen to add words dynamicaly //DONE
   -/- work with local storage to store user data locally
-  -/- integrate firebase and syncronize it with local db
-  -/- work with static management with redux and static component
+  -/- integrate firebase and syncronize it with local db //DONE
+  -/- work with static management with redux and static component 
   -/- build the custom work builder screen
 
 
@@ -64,7 +64,6 @@ Design ::
  -*- wordOutro Page Redesign
  -*- +3 Words Success Page Redesign
  -*- Final Page Before Random Test : after Loop of 12 words
-
 
 
 
@@ -141,11 +140,50 @@ collections : [
 
 
 steps : {
-  // create the database
-  // choose 20 words and fill in all the details for them
-  // create the home screen of the app : header and cards
-  // read data to home screen dynamicaly
+  // create the database //DONE
+  // choose 20 words and fill in all the details for them //DONE
+  // create the home screen of the app : header and cards //DONE
+  // read data to home screen dynamicaly //DONE
 }
 
 
 
+
+
+// 1 // Add 40 Words To Firebase // Done
+// -2 // Make design for header home page // Done
+// 2 // Create the Header of the home page // Done
+// 3 // Create The Ui of card of one words // Done
+// 4 // Loop from firebase to show all the words // Done
+// 5 // Create the ADD TO BAG fucntion and sync it with the Header 12 words Limit // Done
+// 6 // Add the words of the Bag to the local Storage and Firebase to store it for the user // InProgress
+// 7 // Create the transition between add to bag and start learning session to go to the Loop
+
+
+
+
+sessionWords => idUser => {
+  sessionsWordsOfThisUser :{
+    idsOfWordsToLearnNow : [],
+    timeStamp,
+    stepReached
+  }
+}
+
+
+ **** Steps ****
+          After Adding Words of this bag to firebase sessionWords collection : 
+
+  // 1 // navigate to Loop and use the words in bag // Done
+  // 2 // add all the effects to the homescreen after creation of the bag : 
+          - 12 Words Limit Checker // Done
+          - Toogle Btns of add to bag to Checked and change their functions to remove 
+          - Toogle Create Bag btn   
+          - Change The rest of the words add btns to show premuim options
+          - Change Header And Add Some Design to show that we are in a session now and we need to finish it
+  // 3 // Create the Loop Tab Page Screen to show the words in bag right now and static and step reached ( good , very good , fantastic)
+  // 4 // Complete The Loop ( this is a lot of work : tests / static )
+  // 5 // Add The Splash Loading Data Screens with moden loading speeners
+  // 6 // ** FEATURES OF PREMUIM VERSION OF THE APP **
+  // 7 // User Registration and choosing level and languages etc ...
+  // 8 // Using Local Storage To speed up the app

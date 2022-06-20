@@ -1,172 +1,175 @@
-[
-    {
-        "arabic":{
-            "word":"سمك",
-            "example":"استمعت السمكة باهتمام لما ستقوله الضفادع.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/%D8%B3%D9%85%D9%83..mp3?alt=media&token=06231f56-7a4a-460c-ac80-23c8aac5f540"
+{
+    "wordsCollection":[
+        {
+            "arabic":{
+                "word":"سمك",
+                "example":"استمعت السمكة باهتمام لما ستقوله الضفادع.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/%D8%B3%D9%85%D9%83..mp3?alt=media&token=06231f56-7a4a-460c-ac80-23c8aac5f540"
+            },
+            "french":{
+                "word":"poisson",
+                "example":"Les poissons ont écouté attentivement ce que les grenouilles avaient à dire.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/poissons.mp3?alt=media&token=95dd1b86-1d8c-48d6-956d-0a2d14c3a014"
+            },
+            "english":{
+                "word":"The fish",
+                "example":"The fish listened intently to what the frogs had to say.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/The%20fish.mp3?alt=media&token=dd96b7dd-e727-48d6-bfa4-b7f6ada8ad04"
+            },
+            "german":{
+                "word":"fische",
+                "example":"Die Fische hörten aufmerksam zu, was die Frösche zu sagen hatten.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/Fische.mp3?alt=media&token=2cf7e1d2-4fc6-4e32-a0ff-606bac3a2b33"
+            },
+            "italian":{
+                "word":"pesce",
+                "example":"Il pesce ascoltò attentamente ciò che le rane avevano da dire.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/pesce.mp3?alt=media&token=948ddf5a-4158-417c-a8a6-99452687af71"
+            },
+            "spanish":{
+                "word":"pez",
+                "example":"El pez escuchó atentamente lo que las ranas tenían que decir.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/pez.mp3?alt=media&token=8d6ce796-e78b-4575-bd35-7f23c89e2784"
+            },
+            "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/fish-min.jpg?alt=media&token=c58ef4eb-ac18-4530-a704-2c7c9a8e0687",
+            "level":2
         },
-        "french":{
-            "word":"poisson",
-            "example":"Les poissons ont écouté attentivement ce que les grenouilles avaient à dire.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/poissons.mp3?alt=media&token=95dd1b86-1d8c-48d6-956d-0a2d14c3a014"
+        {
+            "arabic":{
+                "word":"الحمالات",
+                "example":"يرتدي الحمالات بدلاً من الحزام.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Far.mp3?alt=media&token=673d577d-9332-4efd-b812-2330139ffeb4"
+            },
+            "french":{
+                "word":"bretelles",
+                "example":"Il porte des bretelles au lieu d'une ceinture.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Ffr.mp3?alt=media&token=2b1f263f-ade5-4a35-8828-031aee7044e4"
+            },
+            "english":{
+                "word":"suspenders",
+                "example":"He wears suspenders instead of a belt.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fen.mp3?alt=media&token=3cb93b25-1cb7-470d-ab62-73edef01c22a"
+            },
+            "german":{
+                "word":"Hosenträger",
+                "example":"Statt Gürtel trägt er Hosenträger.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fde.mp3?alt=media&token=6b8823ea-ab59-4918-9b38-e176fea2cb80"
+            },
+            "italian":{
+                "word":"bretelle",
+                "example":"Indossa delle bretelle invece della cintura.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fit.mp3?alt=media&token=29a4d0cd-1692-4c10-ad0d-0c82919eac2a"
+            },
+            "spanish":{
+                "word":"tirantes",
+                "example":"He wears suspenders instead of a belt.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fsp.mp3?alt=media&token=03c3aca3-9eb2-47de-9519-77a1e01d7b0c"
+            },
+            "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fsuspenders-min.jpg?alt=media&token=c99e3249-fa57-4299-9808-1aea51d09f42",
+            "level":3
         },
-        "english":{
-            "word":"The fish",
-            "example":"The fish listened intently to what the frogs had to say.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/The%20fish.mp3?alt=media&token=dd96b7dd-e727-48d6-bfa4-b7f6ada8ad04"
+        {
+            "arabic":{
+                "word":"حزام",
+                "example":"يرتدي الحمالات بدلاً من الحزام.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Far.mp3?alt=media&token=4659316a-067d-411d-92ff-cb98e50a1335"
+            },
+            "french":{
+                "word":"ceinture",
+                "example":"Il porte des bretelles au lieu d'une ceinture.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Ffr.mp3?alt=media&token=63d8ff60-91ff-4d77-a12d-3bd8033c875f"
+            },
+            "english":{
+                "word":"belt",
+                "example":"He wears suspenders instead of a belt.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fen.mp3?alt=media&token=51dc561b-b6ec-4542-a081-8b78aba1ea07"
+            },
+            "german":{
+                "word":"Gürtel",
+                "example":"Statt Gürtel trägt er Hosenträger.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fde.mp3?alt=media&token=dbc32b7b-25be-4bee-b1e8-6daad878eef5"
+            },
+            "italian":{
+                "word":"cintura",
+                "example":"Indossa delle bretelle invece della cintura.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fit.mp3?alt=media&token=5ae21cfd-7255-4afb-9b92-d60f2fe5a293"
+            },
+            "spanish":{
+                "word":"cinturón",
+                "example":"He wears suspenders instead of a belt.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fsp.mp3?alt=media&token=cf60f040-8c6f-468c-a6c9-04b96a89c1e4"
+            },
+            "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fbelt.jpg?alt=media&token=9595243b-c5ba-4bc9-a804-ee2998cbc2e8",
+            "level":3
         },
-        "german":{
-            "word":"fische",
-            "example":"Die Fische hörten aufmerksam zu, was die Frösche zu sagen hatten.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/Fische.mp3?alt=media&token=2cf7e1d2-4fc6-4e32-a0ff-606bac3a2b33"
+        {
+            "arabic":{
+                "word":"اللحم",
+                "example":"أنا لا أكل اللحم.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Far.mp3?alt=media&token=36316550-4b9b-4f4b-99b5-3c9cdb924601"
+            },
+            "french":{
+                "word":"Viande",
+                "example":"Je ne mange pas de viande.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Ffr.mp3?alt=media&token=75642714-7869-4ce3-8c6e-052b02c067c6"
+            },
+            "english":{
+                "word":"meat",
+                "example":"I do not eat meat.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fen.mp3?alt=media&token=ba8c13cf-349a-47e7-b1b5-a1a4d8cc8266"
+            },
+            "german":{
+                "word":"Fleisch",
+                "example":"Ich esse kein Fleisch.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fde.mp3?alt=media&token=41fd0fd3-3664-4aaf-8c7a-2899b876a50f"
+            },
+            "italian":{
+                "word":"la carne",
+                "example":"Non mangio carne.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fit.mp3?alt=media&token=56c3296c-8d97-477f-a6cc-f102ead8f752"
+            },
+            "spanish":{
+                "word":"carne",
+                "example":"No como carne.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fsp.mp3?alt=media&token=6732d10c-2776-49b4-b013-393382ce02b8"
+            },
+            "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fmeat-min.jpg?alt=media&token=fbd29d82-0052-4215-919f-9d098e9c361e",
+            "level":2
         },
-        "italian":{
-            "word":"pesce",
-            "example":"Il pesce ascoltò attentamente ciò che le rane avevano da dire.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/pesce.mp3?alt=media&token=948ddf5a-4158-417c-a8a6-99452687af71"
-        },
-        "spanish":{
-            "word":"pez",
-            "example":"El pez escuchó atentamente lo que las ranas tenían que decir.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/pez.mp3?alt=media&token=8d6ce796-e78b-4575-bd35-7f23c89e2784"
-        },
-        "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/fish-min.jpg?alt=media&token=c58ef4eb-ac18-4530-a704-2c7c9a8e0687",
-        "level":2
-    },
-    {
-        "arabic":{
-            "word":"الحمالات",
-            "example":"يرتدي الحمالات بدلاً من الحزام.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Far.mp3?alt=media&token=673d577d-9332-4efd-b812-2330139ffeb4"
-        },
-        "french":{
-            "word":"bretelles",
-            "example":"Il porte des bretelles au lieu d'une ceinture.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Ffr.mp3?alt=media&token=2b1f263f-ade5-4a35-8828-031aee7044e4"
-        },
-        "english":{
-            "word":"suspenders",
-            "example":"He wears suspenders instead of a belt.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fen.mp3?alt=media&token=3cb93b25-1cb7-470d-ab62-73edef01c22a"
-        },
-        "german":{
-            "word":"Hosenträger",
-            "example":"Statt Gürtel trägt er Hosenträger.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fde.mp3?alt=media&token=6b8823ea-ab59-4918-9b38-e176fea2cb80"
-        },
-        "italian":{
-            "word":"bretelle",
-            "example":"Indossa delle bretelle invece della cintura.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fit.mp3?alt=media&token=29a4d0cd-1692-4c10-ad0d-0c82919eac2a"
-        },
-        "spanish":{
-            "word":"tirantes",
-            "example":"He wears suspenders instead of a belt.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fsp.mp3?alt=media&token=03c3aca3-9eb2-47de-9519-77a1e01d7b0c"
-        },
-        "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/suspenders%2Fsuspenders-min.jpg?alt=media&token=c99e3249-fa57-4299-9808-1aea51d09f42",
-        "level":3
-    },
-    {
-        "arabic":{
-            "word":"حزام",
-            "example":"يرتدي الحمالات بدلاً من الحزام.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Far.mp3?alt=media&token=4659316a-067d-411d-92ff-cb98e50a1335"
-        },
-        "french":{
-            "word":"ceinture",
-            "example":"Il porte des bretelles au lieu d'une ceinture.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Ffr.mp3?alt=media&token=63d8ff60-91ff-4d77-a12d-3bd8033c875f"
-        },
-        "english":{
-            "word":"belt",
-            "example":"He wears suspenders instead of a belt.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fen.mp3?alt=media&token=51dc561b-b6ec-4542-a081-8b78aba1ea07"
-        },
-        "german":{
-            "word":"Gürtel",
-            "example":"Statt Gürtel trägt er Hosenträger.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fde.mp3?alt=media&token=dbc32b7b-25be-4bee-b1e8-6daad878eef5"
-        },
-        "italian":{
-            "word":"cintura",
-            "example":"Indossa delle bretelle invece della cintura.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fit.mp3?alt=media&token=5ae21cfd-7255-4afb-9b92-d60f2fe5a293"
-        },
-        "spanish":{
-            "word":"cinturón",
-            "example":"He wears suspenders instead of a belt.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fsp.mp3?alt=media&token=cf60f040-8c6f-468c-a6c9-04b96a89c1e4"
-        },
-        "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/belt%2Fbelt.jpg?alt=media&token=9595243b-c5ba-4bc9-a804-ee2998cbc2e8",
-        "level":3
-    },
-    {
-        "arabic":{
-            "word":"اللحم",
-            "example":"أنا لا أكل اللحم.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Far.mp3?alt=media&token=36316550-4b9b-4f4b-99b5-3c9cdb924601"
-        },
-        "french":{
-            "word":"Viande",
-            "example":"Je ne mange pas de viande.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Ffr.mp3?alt=media&token=75642714-7869-4ce3-8c6e-052b02c067c6"
-        },
-        "english":{
-            "word":"meat",
-            "example":"I do not eat meat.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fen.mp3?alt=media&token=ba8c13cf-349a-47e7-b1b5-a1a4d8cc8266"
-        },
-        "german":{
-            "word":"Fleisch",
-            "example":"Ich esse kein Fleisch.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fde.mp3?alt=media&token=41fd0fd3-3664-4aaf-8c7a-2899b876a50f"
-        },
-        "italian":{
-            "word":"la carne",
-            "example":"Non mangio carne.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fit.mp3?alt=media&token=56c3296c-8d97-477f-a6cc-f102ead8f752"
-        },
-        "spanish":{
-            "word":"carne",
-            "example":"No como carne.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fsp.mp3?alt=media&token=6732d10c-2776-49b4-b013-393382ce02b8"
-        },
-        "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/meat%2Fmeat-min.jpg?alt=media&token=fbd29d82-0052-4215-919f-9d098e9c361e",
-        "level":2
-    },
-    {
-        "arabic":{
-            "word":"الطيور",
-            "example":"طارت الطيور جنوبا.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Far.mp3?alt=media&token=4e4723bd-0c67-4d08-84ac-baa96b29a5fb"
-        },
-        "french":{
-            "word":"oiseaux",
-            "example":"Les oiseaux volaient vers le sud.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Ffr.mp3?alt=media&token=cb2716ea-b815-4d23-8d35-966acb5a7ba1"
-        },
-        "english":{
-            "word":"birds",
-            "example":"The birds flew south.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fen.mp3?alt=media&token=9d05c3d6-09e0-415b-8474-7cdabdf827be"
-        },
-        "german":{
-            "word":"Vögel",
-            "example":"Die Vögel flogen nach Süden.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fde.mp3?alt=media&token=28bdd2ef-5758-4ac1-8be0-35485fb929ba"
-        },
-        "italian":{
-            "word":"uccelli",
-            "example":"Gli uccelli volarono a sud.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fit.mp3?alt=media&token=be2b0237-8494-4eb5-8ad1-2f83f1849411"
-        },
-        "spanish":{
-            "word":"aves",
-            "example":"Los pájaros volaron hacia el sur.",
-            "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fsp.mp3?alt=media&token=ae2a4ab7-2299-46d5-ad4b-eb79d07318cd"
-        },
-        "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fbirds.jpg?alt=media&token=6534693d-b8ad-492c-aff1-a42baa7ae6a7",
-        "level":2
-    }
-]
+        {
+            "arabic":{
+                "word":"الطيور",
+                "example":"طارت الطيور جنوبا.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Far.mp3?alt=media&token=4e4723bd-0c67-4d08-84ac-baa96b29a5fb"
+            },
+            "french":{
+                "word":"oiseaux",
+                "example":"Les oiseaux volaient vers le sud.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Ffr.mp3?alt=media&token=cb2716ea-b815-4d23-8d35-966acb5a7ba1"
+            },
+            "english":{
+                "word":"birds",
+                "example":"The birds flew south.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fen.mp3?alt=media&token=9d05c3d6-09e0-415b-8474-7cdabdf827be"
+            },
+            "german":{
+                "word":"Vögel",
+                "example":"Die Vögel flogen nach Süden.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fde.mp3?alt=media&token=28bdd2ef-5758-4ac1-8be0-35485fb929ba"
+            },
+            "italian":{
+                "word":"uccelli",
+                "example":"Gli uccelli volarono a sud.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fit.mp3?alt=media&token=be2b0237-8494-4eb5-8ad1-2f83f1849411"
+            },
+            "spanish":{
+                "word":"aves",
+                "example":"Los pájaros volaron hacia el sur.",
+                "wordAudio":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fsp.mp3?alt=media&token=ae2a4ab7-2299-46d5-ad4b-eb79d07318cd"
+            },
+            "wordImage":"https://firebasestorage.googleapis.com/v0/b/wordsbag.appspot.com/o/birds%2Fbirds.jpg?alt=media&token=6534693d-b8ad-492c-aff1-a42baa7ae6a7",
+            "level":2
+        }
+    ]
+    
+}

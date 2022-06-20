@@ -23,9 +23,10 @@ const mapState = ({loop}) => ({
   errors: loop.errors,
   globalStep: loop.globalStep,
   ourWordIndice: loop.myWordIndice,
+  wordsOfThisBag: loop.wordsOfThisBag,
 });
 const WordOutro = ({setfirst}) => {
-  const {ourStep, wordNow, ourWordIndice, globalStep, errors} =
+  const {ourStep, wordNow, ourWordIndice, globalStep, errors, wordsOfThisBag} =
     useSelector(mapState);
   const dispatch = useDispatch();
 
@@ -81,7 +82,7 @@ const WordOutro = ({setfirst}) => {
         stopTogether: false, // <--- so that all animation get completed
       },
     ).start(() => {
-      dispatch(nextWord(ourWordIndice + 1));
+      dispatch(nextWord(wordsOfThisBag, ourWordIndice + 1));
       // if (globalStep === 2 || globalStep === 5 || globalStep === 8) {
       //   dispatch(goToThreePlus());
       //   dispatch(addToThreWordsSteps(globalStep + 1));

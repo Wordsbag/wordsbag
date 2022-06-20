@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {createStore, applyMiddleware, compose} from 'redux';
-import rootReducer from './Loop/rootReducer';
+import rootReducer from './rootReducer';
 import thunk from 'redux-thunk';
 
 export const middlewares = [thunk];

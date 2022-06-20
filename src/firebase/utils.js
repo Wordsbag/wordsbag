@@ -2,7 +2,7 @@ import {initializeApp} from 'firebase/app';
 import {getAuth} from 'firebase/auth';
 import {getFirestore} from 'firebase/firestore';
 import {getStorage} from 'firebase/storage';
-
+import {initializeFirestore} from 'firebase/firestore';
 const firebaseConfig = {
   apiKey: 'AIzaSyBmcufsJaqb39rmcNUtg1GGBhOs7kDnQVI',
   authDomain: 'wordsbag.firebaseapp.com',
@@ -13,10 +13,11 @@ const firebaseConfig = {
   measurementId: 'G-BFN64EY6MC',
 };
 
-// Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-const db = getFirestore();
+const user = auth.currentUser;
+const db = initializeFirestore(app, {
+  experimentalForceLongPolling: true,
+});
 const storage = getStorage();
-
 export {auth, db, storage};

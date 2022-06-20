@@ -7,6 +7,7 @@ import {Quiz} from './src/components/quiz/screens/';
 import {FirstBuilder} from './src/components/first';
 import Loop from './src/Loop/Loop';
 import ProgressIndicator from './src/components/progressBar/ProgressIndicator';
+import AppNav from './src/AppNav';
 const App = () => {
   // const animated = new Animated.Value(0);
   // const duration = 5000;
@@ -30,7 +31,8 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <Loop />
+      {/* <Loop /> */}
+      <AppNav />
     </Provider>
   );
 };

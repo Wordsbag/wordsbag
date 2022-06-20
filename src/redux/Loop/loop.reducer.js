@@ -4,6 +4,7 @@ const INITIAL_STATE = {
   ourStep: 0,
   errors: [],
   wordNow: '',
+  wordsOfThisBag: [],
   globalStep: 0,
   myWordIndice: 0,
 };
@@ -71,6 +72,12 @@ const loopReducer = (state = INITIAL_STATE, action) => {
         ...state,
         wordNow: action.payload.thisWord,
         myWordIndice: action.payload.newIndice,
+      };
+    case loopTypes.SET_WORDS_BAG:
+      console.log('hahah', action.payload);
+      return {
+        ...state,
+        wordsOfThisBag: action.payload,
       };
     default:
       return state;
