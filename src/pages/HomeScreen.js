@@ -5,6 +5,8 @@ import {
   ActivityIndicator,
   View,
   Dimensions,
+  SafeAreaView,
+  FlatList,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import HeaderHome from '../components/headerHome/HeaderHome';
@@ -20,6 +22,8 @@ import {
 } from 'firebase/firestore';
 import {db} from '../firebase/utils';
 import ButtonToStart from '../components/buttonToStart/ButtonToStart';
+import HeaderHomeWithWordsBag from '../components/headerHomeWith/HeaderHomeWithWordsBag';
+import TopHeader from '../components/topHeader/TopHeader';
 
 const mapState = ({wordBagReducer}) => ({
   wordsBag: wordBagReducer.wordsBag,
@@ -62,10 +66,12 @@ const HomeScreen = () => {
     });
   }, []);
   return (
-    <View style={styles.container}>
-      <ScrollView style={styles.container}>
-        <HeaderHome />
-
+    <SafeAreaView style={styles.container}>
+      <TopHeader />
+      <HeaderHome />
+      {/* {!loading ? <HeaderHomeWithWordsBag /> : null} */}
+      <HeaderHomeWithWordsBag />
+      {/* <ScrollView style={styles.container}>
         {loading ? (
           [
             words.map((val, index) => {
@@ -82,7 +88,26 @@ const HomeScreen = () => {
         ) : (
           <ActivityIndicator size="large" color={'#03045e'} />
         )}
-      </ScrollView>
+      </ScrollView> */}
+      {/* {loading ? (
+        <FlatList
+          nestedScrollEnabled
+          ListHeaderComponent={HeaderHomeWithWordsBag}
+          data={words}
+          // renderItem={WordCard}
+          renderItem={({item, index, separators}) => (
+            <WordCard
+              firstWord={item.english.word}
+              secondWord={item.german.word}
+              wordId={item.id}
+            />
+          )}
+          keyExtractor={item => item.id}
+        />
+      ) : (
+        <ActivityIndicator size="large" color={'#03045e'} />
+      )} */}
+
       {!isLoading ? null : (
         <View
           style={{
@@ -102,7 +127,7 @@ const HomeScreen = () => {
         </View>
       )}
       <ButtonToStart />
-    </View>
+    </SafeAreaView>
   );
 };
 

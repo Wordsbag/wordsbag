@@ -9,6 +9,7 @@ import {
 import React, {useState} from 'react';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {useDispatch, useSelector} from 'react-redux';
 import {
   addWordToBag,
@@ -21,10 +22,14 @@ const mapState = ({wordBagReducer}) => ({
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+// const WordCard = ({item}) => {
 const WordCard = ({firstWord, secondWord, wordId}) => {
   const {wordsBag} = useSelector(mapState);
   const dispatch = useDispatch();
   const [pressed, setPressed] = useState(false);
+  // const firstWord = item.english.word;
+  // const secondWord = item.german.word;
+  // const wordId = item.id;
   return (
     <View style={styles.myCard}>
       <View style={styles.firstWord}>
@@ -55,8 +60,13 @@ const WordCard = ({firstWord, secondWord, wordId}) => {
         <TouchableOpacity
           style={styles.addToBagBtn}
           onPress={() => {
-            setPressed(true);
-            dispatch(addWordToBag(wordId));
+            if (!pressed) {
+              setPressed(true);
+              dispatch(addWordToBag(wordId));
+            } else {
+              setPressed(false);
+              dispatch(removeWordFromBag(wordId));
+            }
           }}
           disabled={wordsBag.length >= 12}>
           {!pressed ? (
@@ -68,10 +78,10 @@ const WordCard = ({firstWord, secondWord, wordId}) => {
               }}
             />
           ) : (
-            <Ionicons
-              name="eye"
+            <FontAwesome5
+              name="clipboard-check"
               style={{
-                color: '#fff',
+                color: '#03045e',
                 fontSize: 25,
               }}
             />

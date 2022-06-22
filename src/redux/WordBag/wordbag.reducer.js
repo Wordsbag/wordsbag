@@ -4,6 +4,7 @@ const INITIAL_STATE = {
   wordsBag: [],
   wordsBagAddedSuccess: false,
   loading: false,
+  wordsBagAddedId: '',
 };
 
 const wordBagReducer = (state = INITIAL_STATE, action) => {
@@ -31,6 +32,7 @@ const wordBagReducer = (state = INITIAL_STATE, action) => {
         wordsBagAddedSuccess: true,
         loading: true,
         wordsBag: [],
+        wordsBagAddedId: action.idOftheBagCreated,
       };
     case wordBagTypes.LOADING_HANDLE:
       return {

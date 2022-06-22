@@ -40,6 +40,7 @@ export const createNewBag = wordsInThisBag => async dispatch => {
     dispatch({
       type: wordBagTypes.NEW_BAG_CREATED_SUCCESSFULY,
       payload: false,
+      idOftheBagCreated: docRef.id,
     });
     dispatch({
       type: wordBagTypes.LOADING_HANDLE,

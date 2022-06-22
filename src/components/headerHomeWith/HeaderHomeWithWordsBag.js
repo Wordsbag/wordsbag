@@ -5,19 +5,21 @@ import {
   Dimensions,
   TouchableOpacity,
   Image,
+  ImageBackground,
 } from 'react-native';
 import React, {useState} from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useDispatch, useSelector} from 'react-redux';
 import {addWordToBag} from '../../redux/WordBag/wordbag.actions';
 import {useNavigation} from '@react-navigation/native';
+import BgCard from '../../assets/bgCard.jpg';
 const mapState = ({wordBagReducer}) => ({
   wordsBag: wordBagReducer.wordsBag,
 });
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const HeaderHome = () => {
+const HeaderHomeWithWordsBag = () => {
   const navigation = useNavigation();
   const {wordsBag} = useSelector(mapState);
   const dispatch = useDispatch();
@@ -35,34 +37,37 @@ const HeaderHome = () => {
         />
       </View> */}
       <View style={styles.headerBox}>
-        <View style={styles.textBox}>
-          <Text style={styles.mainText}>Hello Oussama</Text>
-          <Text style={styles.secondText}>Add 12 words to your Bag</Text>
-          <TouchableOpacity
-            style={styles.actionBtn}
-            onPress={() => {
-              navigation.navigate('Loop');
-            }}>
-            <Text style={styles.actionBtnText}>Join Session</Text>
-          </TouchableOpacity>
-          {/* <View style={styles.counterDesign}>
-            <Text style={styles.counterDesignTxt}>{wordsBag.length}/12</Text>
-          </View> */}
-        </View>
-        <View style={styles.imageStyle}>
-          <Image
-            style={styles.logo}
-            source={{
-              uri: 'https://clipart.world/wp-content/uploads/2020/08/a-school-bag-png-transparent.png',
-            }}
-          />
+        <Image source={BgCard} resizeMode="cover" style={styles.image} />
+        <View style={styles.insideHeaderBox}>
+          <View style={styles.textBox}>
+            <Text style={styles.mainText}>Hello Oussama</Text>
+            <Text style={styles.secondText}>Complete Your Words Bag</Text>
+            <TouchableOpacity
+              style={styles.actionBtn}
+              onPress={() => {
+                navigation.navigate('Loop');
+              }}>
+              <Text style={styles.actionBtnText}>Finish IT</Text>
+            </TouchableOpacity>
+            {/* <View style={styles.counterDesign}>
+              <Text style={styles.counterDesignTxt}>{wordsBag.length}/12</Text>
+            </View> */}
+          </View>
+          <View style={styles.imageStyle}>
+            <Image
+              style={styles.logo}
+              source={{
+                uri: 'https://clipart.world/wp-content/uploads/2020/08/a-school-bag-png-transparent.png',
+              }}
+            />
+          </View>
         </View>
       </View>
     </View>
   );
 };
 
-export default HeaderHome;
+export default HeaderHomeWithWordsBag;
 
 const styles = StyleSheet.create({
   counterDesign: {
@@ -95,6 +100,24 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingHorizontal: 20,
   },
+  image: {
+    width: '100%',
+    borderRadius: 15,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    // paddingHorizontal: 20,
+  },
+  insideHeaderBox: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
   headerBox: {
     height: 200,
     width: '90%',
@@ -106,34 +129,36 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 20,
+    position: 'relative',
   },
   textBox: {
     width: '70%',
   },
   mainText: {
-    fontSize: 25,
+    fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 5,
-    color: '#ade8f4',
+    color: '#03045e',
   },
   secondText: {
-    color: '#ade8f4',
+    color: '#03045e',
     marginBottom: 5,
+    fontSize: 16,
+    fontWeight: '400',
   },
 
   actionBtn: {
     padding: 10,
     paddingHorizontal: 15,
     width: 120,
-    backgroundColor: '#ade8f4',
+    backgroundColor: '#cde26f',
     borderRadius: 15,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 10,
   },
   actionBtnText: {
-    color: '#03045e',
+    color: '#000',
     fontSize: 14,
   },
   imageStyle: {

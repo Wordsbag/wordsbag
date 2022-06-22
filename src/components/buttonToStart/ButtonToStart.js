@@ -5,26 +5,49 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {createNewBag} from '../../redux/WordBag/wordbag.actions';
+import {addThisBagToLocal} from '../../redux/Local/local.actions';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const mapState = ({wordBagReducer}) => ({
+const mapState = ({wordBagReducer, localReducer}) => ({
   wordsBag: wordBagReducer.wordsBag,
   loading: wordBagReducer.loading,
+  wordsBagAddedSuccess: wordBagReducer.wordsBagAddedSuccess,
+  wordsBagAddedId: wordBagReducer.wordsBagAddedId,
+  localWordsBag: localReducer.localWordsBag,
 });
 
 const ButtonToStart = () => {
+  const {
+    wordsBag,
+    wordsBagAddedId,
+    loading,
+    wordsBagAddedSuccess,
+    localWordsBag,
+  } = useSelector(mapState);
   const dispatch = useDispatch();
 
   const createBag = () => {
     console.log(wordsBag);
     dispatch(createNewBag(wordsBag));
+    console.log('added of function => ', wordsBagAddedId);
   };
 
-  const {wordsBag, loading} = useSelector(mapState);
+  useEffect(() => {
+    console.log('added => ', wordsBagAddedId);
+    if (wordsBagAddedSuccess) {
+      if (wordsBagAddedId !== '') {
+        dispatch(addThisBagToLocal(wordsBagAddedId));
+      }
+    }
+  }, [wordsBagAddedId]);
+  useEffect(() => {
+    console.log('we are here ,', localWordsBag);
+  }, []);
+
   return (
     <TouchableOpacity
       style={styles.btnStartWrapper}
