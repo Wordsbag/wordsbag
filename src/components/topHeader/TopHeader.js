@@ -21,7 +21,7 @@ export default TopHeader;
 const styles = StyleSheet.create({
   profileBar: {
     width: '100%',
-    marginTop: 20,
+    marginVertical: 20,
     justifyContent: 'space-between',
     flexDirection: 'row',
     paddingHorizontal: 20,

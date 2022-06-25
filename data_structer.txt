@@ -178,13 +178,13 @@ sessionWords => idUser => {
   // 2 // add all the effects to the homescreen after creation of the bag : 
           - 12 Words Limit Checker // Done
           - Toogle Btns of add to bag to Checked and change their functions to remove // Done
-          - Toogle Create Bag btn  // InProgress
+          - Toogle Create Bag btn  // Done
           - Change The rest of the words add btns to show premuim options // NOT NOW
           - Check If there is a wordsbag already or not on launching // Done
-          - Change Header And Add Some Design to show that we are in a session now and we need to finish it
-  // 3 // Create the Loop Tab Page Screen to show the words in bag right now and statics and step reached ( good , very good , fantastic)
+          - Change Header And Add Some Design to show that we are in a session now and we need to finish it // Done
+  // 3 // Create the Loop Tab Page Screen to show the words in bag right now and statics and step reached ( good , very good , fantastic)  // Canceled and replaced in the Home Page
   // 4 // Complete The Loop ( this is a lot of work : tests / static )
-  // 5 // Add The Splash Loading Data Screens with moden loading speeners
+  // 5 // Add The Splash Loading Data Screens with modern loading speeners
   // 6 // ** FEATURES OF PREMUIM VERSION OF THE APP **
   // 7 // User Registration and choosing level and languages etc ...
   // 8 // Using Local Storage To speed up the app
@@ -217,6 +217,8 @@ sessionWords => idUser => {
 
 
 
+
+
   +++ on loading home page on check in the local storage to see if we have a words bag not completed or not 
 
   wordsBag : {id , step}
@@ -226,3 +228,35 @@ sessionWords => idUser => {
   Nice (1 repetion)
    Good (2 repetion)
     Fantastic (3 repetion)
+
+
+after creating a bag add the bag with the id + all steps required to local storage and the time of the timer // Done
+for every Launching check if there is a bag or not to choose the layout that will be rendered // Done
+
+Local : {
+  wordsBagId:'',
+  repeatedNbr:0,
+  step:0,
+  timeOfCreation:,
+}
+
+timer get the date
+
+
+
+  5:50pm
+
+  1:50am
+
+
+  00:20am
+
+
+  90mins
+
+
+
+
+
+  // Update the progress bars with data of steps reached in the local 
+  // Go To The Loop

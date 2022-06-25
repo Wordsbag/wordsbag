@@ -3,11 +3,14 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {clearReduxPersistBags} from '../redux/Local/local.actions';
 const mapState = ({localReducer}) => ({
-  localWordsBag: localReducer.localWordsBag,
+  wordsBagId: localReducer.wordsBagId,
+  repeatedNbr: localReducer.repeatedNbr,
+  step: localReducer.step,
+  timeOfCreation: localReducer.timeOfCreation,
 });
 
 const Splash = ({navigation}) => {
-  const {localWordsBag} = useSelector(mapState);
+  const {wordsBagId, repeatedNbr, step, timeOfCreation} = useSelector(mapState);
   const dispatch = useDispatch();
 
   const goToHome = () => {
@@ -19,14 +22,14 @@ const Splash = ({navigation}) => {
     dispatch(clearReduxPersistBags());
   };
   useEffect(() => {
-    console.log('localWordsBag => ', localWordsBag);
+    console.log('timeOfCreation => ', timeOfCreation);
   }, []);
 
   return (
     <View style={styles.container}>
       <Text>Splash</Text>
       <TouchableOpacity onPress={goToHome} style={styles.btnGo}>
-        {localWordsBag[0] === 10 ? (
+        {wordsBagId === 10 ? (
           <Text style={styles.btnGoText}>Hahah</Text>
         ) : (
           <Text style={styles.btnGoText}>Hahaha</Text>
