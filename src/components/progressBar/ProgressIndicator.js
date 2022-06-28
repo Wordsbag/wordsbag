@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Animated} from 'react-native';
 import {useSelector} from 'react-redux';
+import {COLORS} from '../../constants';
 
 const mapState = ({loop}) => ({
   ourStep: loop.ourStep,
@@ -42,11 +43,21 @@ const ProgressIndicator = () => {
               },
             ]}></Animated.View>
         </View>
+
         <View style={styles.externStepsIndicatoView}>
           <Text style={styles.externStepsIndicatoText}>
             {Math.floor(wordIndice / 4) + 1}/4
           </Text>
         </View>
+      </View>
+
+      <View style={[styles.progrBarElement, styles.niceprogrBarElementColor]}>
+        <View
+          style={[
+            styles.progrBarElementIntern,
+            styles.niceProgBarColorIntern,
+            {width: `10%`},
+          ]}></View>
       </View>
 
       {/* <TouchableOpacity onPress={handleNext} style={styles.buttonStyle}>
@@ -59,6 +70,33 @@ const ProgressIndicator = () => {
 export default ProgressIndicator;
 
 const styles = StyleSheet.create({
+  niceProgBarColorIntern: {
+    backgroundColor: COLORS.progBar1,
+    width: '100%',
+  },
+  niceprogrBarElementColor: {
+    borderColor: COLORS.progBar1,
+  },
+  progrBarElementIntern: {
+    height: 5,
+
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    borderRadius: 8,
+  },
+
+  progrBarElement: {
+    width: '100%',
+    height: 5,
+    backgroundColor: COLORS.border,
+    position: 'relative',
+    borderRadius: 4,
+    borderWidth: 0,
+
+    marginLeft: 0,
+  },
+
   progBarInternStyle: {
     height: 14,
 

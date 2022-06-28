@@ -25,6 +25,7 @@ import WordOutro from '../components/WordOutro';
 import BetweenThree from '../components/BetweenThree';
 import FinalLoopScreen from '../components/FinalLoopScreen';
 import Sound from 'react-native-sound';
+import {COLORS} from '../constants';
 const mapState = ({loop}) => ({
   ourStep: loop.ourStep,
   wordNow: loop.wordNow,
@@ -70,11 +71,11 @@ const Loop = () => {
 
   return (
     <View style={styles.container}>
-      <Image
+      {/* <Image
         style={styles.bgImageStyle}
         source={Background}
         resizeMode={'cover'}
-      />
+      /> */}
       {/* <FlatList
         data={DATA}
         renderItem={({item, index}) => {
@@ -127,7 +128,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    backgroundColor: '#27175D',
+    backgroundColor: COLORS.background,
     paddingTop: 0,
   },
 });

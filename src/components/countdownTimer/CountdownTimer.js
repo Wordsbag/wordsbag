@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, Dimensions} from 'react-native';
+import {COLORS} from '../../constants';
 import {useCountdown} from '../hooks/useCountdown';
 import DateTimeDisplay from './DateTimeDisplay';
 
@@ -51,19 +52,16 @@ export default CountdownTimer;
 
 const styles = StyleSheet.create({
   showCounter: {
-    backgroundColor: '#27175D',
-    width: '90%',
-    marginLeft: windowWidth / 20,
+    backgroundColor: COLORS.counter,
+    width: '100%',
     height: 120,
-    paddingHorizontal: windowWidth / 15,
     paddingVertical: 20,
     borderRadius: 16,
-    marginTop: 30,
     justifyContent: 'center',
     alignItems: 'center',
   },
   timeStyle: {
     fontSize: 26,
-    color: '#fff',
+    color: COLORS.btn,
   },
 });

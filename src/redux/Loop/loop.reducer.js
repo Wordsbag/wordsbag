@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   errors: [],
   wordNow: '',
   wordsOfThisBag: [],
-  globalStep: 0,
+  globalStep: 1,
   myWordIndice: 0,
 };
 

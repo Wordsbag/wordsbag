@@ -6,6 +6,7 @@ import Loop from '../Loop/Loop';
 import Extra from './Extra';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Icon, {Icons} from '../constants/Icons';
+import {COLORS} from '../constants';
 const Tab = createMaterialTopTabNavigator();
 const Colors = [(primary = '#03045e')];
 const TabArr = [
@@ -65,17 +66,20 @@ const Home = () => {
       screenOptions={{
         swipeEnabled: false,
         tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: COLORS.btn,
+        },
         tabBarIndicatorStyle: {
           position: 'absolute',
           top: 0,
-          height: 6,
-          backgroundColor: '#48cae4',
+          height: 0,
+          backgroundColor: COLORS.btn,
         },
         tabBarItemStyle: {flexDirection: 'row'},
         // tabBarStyle: { backgroundColor: 'powderblue' },
         // tabBarScrollEnabled: true,
-        tabBarActiveTintColor: '#48cae4',
-        tabBarInactiveTintColor: '#03045e',
+        tabBarActiveTintColor: COLORS.btn,
+        tabBarInactiveTintColor: '#fff',
       }}>
       {TabArr.map((_, index) => {
         return (
@@ -92,7 +96,12 @@ const Home = () => {
                   color={color}
                 />
               ),
-              tabBarStyle: {display: _.display},
+              tabBarStyle: {
+                display: _.display,
+                backgroundColor: COLORS.background,
+                height: 60,
+                justifyContent: 'center',
+              },
             }}
           />
         );

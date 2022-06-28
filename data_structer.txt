@@ -258,5 +258,6 @@ timer get the date
 
 
 
-  // Update the progress bars with data of steps reached in the local 
+  // Update the progress bars with data of steps reached in the local :
+      lets say that there is 5 steps so 1*20 to extract the percentage value of the step // Done
   // Go To The Loop

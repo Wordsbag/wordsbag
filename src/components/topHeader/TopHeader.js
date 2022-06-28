@@ -1,17 +1,33 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {COLORS} from '../../constants';
+import Boy from '../../assets/boy.png';
 const TopHeader = () => {
   return (
     <View style={styles.profileBar}>
-      <Text style={styles.profileBadge}>P</Text>
-      <Ionicons
-        name="notifications"
+      {/* <Text style={styles.profileBadge}>P</Text> */}
+      <View style={styles.profileBadge}>
+        <Image style={styles.profileBadgeImg} source={Boy} />
+      </View>
+      <View
         style={{
-          color: '#0077b6',
-          fontSize: 25,
-        }}
-      />
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderWidth: 0.5,
+          borderColor: '#fff',
+          width: 36,
+          height: 36,
+          borderRadius: 18,
+        }}>
+        <Ionicons
+          name="notifications-outline"
+          style={{
+            color: COLORS.topNavIcon,
+            fontSize: 22,
+          }}
+        />
+      </View>
     </View>
   );
 };
@@ -24,16 +40,16 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     justifyContent: 'space-between',
     flexDirection: 'row',
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
   },
+  profileBadgeImg: {height: 30, width: 30},
+
   profileBadge: {
-    height: 30,
-    width: 30,
-    backgroundColor: '#0077b6',
-    color: 'white',
-    fontSize: 20,
-    borderRadius: 15,
-    textAlign: 'center',
-    lineHeight: 30,
+    height: 40,
+    width: 40,
+    backgroundColor: COLORS.topNavIcon,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

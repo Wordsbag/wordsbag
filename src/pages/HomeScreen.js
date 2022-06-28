@@ -1,7 +1,6 @@
 import {
   StyleSheet,
   Text,
-  ScrollView,
   ActivityIndicator,
   View,
   Dimensions,
@@ -9,23 +8,16 @@ import {
   FlatList,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
+import LinearGradient from 'react-native-linear-gradient';
 import HeaderHome from '../components/headerHome/HeaderHome';
 import WordCard from '../components/wordCard/WordCard';
 import {useDispatch, useSelector} from 'react-redux';
-import {
-  collection,
-  query,
-  limit,
-  getDocs,
-  startAt,
-  orderBy,
-} from 'firebase/firestore';
+import {collection, query, limit, getDocs} from 'firebase/firestore';
 import {db} from '../firebase/utils';
 import ButtonToStart from '../components/buttonToStart/ButtonToStart';
-import HeaderHomeWithWordsBag from '../components/headerHomeWith/HeaderHomeWithWordsBag';
 import TopHeader from '../components/topHeader/TopHeader';
 import HomeStaticCard from '../components/homeStaticCard/HomeStaticCard';
-import CountdownTimer from '../components/countdownTimer/CountdownTimer';
+import {COLORS} from '../constants';
 const mapState = ({wordBagReducer, localReducer}) => ({
   wordsBag: wordBagReducer.wordsBag,
   isLoading: wordBagReducer.loading,
@@ -82,7 +74,11 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView
+      // start={{x: 0, y: 0}}
+      // end={{x: 1, y: 1}}
+      // colors={['purple', 'white']}
+      style={styles.container}>
       <TopHeader />
       {/* <HeaderHome /> */}
       {/* <HomeStaticCard /> */}
@@ -106,30 +102,34 @@ const HomeScreen = () => {
           <ActivityIndicator size="large" color={'#03045e'} />
         )}
       </ScrollView> */}
-      {loading ? (
-        <FlatList
-          nestedScrollEnabled
-          ListHeaderComponent={
-            wordsBagId === null ? HeaderHome : HomeStaticCard
-          }
-          data={words}
-          // renderItem={WordCard}
-          renderItem={({item, index, separators}) => {
-            if (wordsBagId === null) {
-              return (
-                <WordCard
-                  firstWord={item.english.word}
-                  secondWord={item.german.word}
-                  wordId={item.id}
-                />
-              );
-            }
-          }}
-          keyExtractor={item => item.id}
-        />
-      ) : (
-        <ActivityIndicator size="large" color={'#03045e'} />
-      )}
+      {wordsBagId === null ? null : <HomeStaticCard />}
+      {wordsBagId === null ? (
+        <>
+          {loading ? (
+            <FlatList
+              // style={{backgroundColor: 'green'}}
+              nestedScrollEnabled
+              ListHeaderComponent={HeaderHome}
+              data={words}
+              // renderItem={WordCard}
+              renderItem={({item, index, separators}) => {
+                if (wordsBagId === null) {
+                  return (
+                    <WordCard
+                      firstWord={item.english.word}
+                      secondWord={item.german.word}
+                      wordId={item.id}
+                    />
+                  );
+                }
+              }}
+              keyExtractor={item => item.id}
+            />
+          ) : (
+            <ActivityIndicator size="large" color={'#03045e'} />
+          )}
+        </>
+      ) : null}
 
       {!isLoading ? null : (
         <View
@@ -180,6 +180,7 @@ const styles = StyleSheet.create({
     // paddingVertical: 20,
     paddingTop: 0,
     marginBottom: 0,
-    backgroundColor: '#EAECEF',
+    backgroundColor: COLORS.background,
+    paddingHorizontal: 20,
   },
 });
