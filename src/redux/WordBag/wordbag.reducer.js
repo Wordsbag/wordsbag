@@ -31,8 +31,13 @@ const wordBagReducer = (state = INITIAL_STATE, action) => {
         ...state,
         wordsBagAddedSuccess: true,
         loading: true,
-        wordsBag: [],
+        // wordsBag: [],
         wordsBagAddedId: action.idOftheBagCreated,
+      };
+    case wordBagTypes.CLEAR_WORDS_BAG:
+      return {
+        ...state,
+        wordsBag: [],
       };
     case wordBagTypes.LOADING_HANDLE:
       return {

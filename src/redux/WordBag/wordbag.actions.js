@@ -51,3 +51,10 @@ export const createNewBag = wordsInThisBag => async dispatch => {
     console.log(err);
   }
 };
+
+export const clearWordsBag = () => dispatch => {
+  console.log('from redux clearWordsBag');
+  dispatch({
+    type: wordBagTypes.CLEAR_WORDS_BAG,
+  });
+};

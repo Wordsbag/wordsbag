@@ -97,10 +97,8 @@ const styles = StyleSheet.create({
   },
   headerBox: {
     height: 200,
-    width: '90%',
-    marginLeft: windowWidth / 20,
+    width: '100%',
     marginBottom: 20,
-    marginTop: 20,
     backgroundColor: '#0077b6',
     borderRadius: 15,
     flexDirection: 'row',

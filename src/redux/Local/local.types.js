@@ -4,6 +4,7 @@ const localTypes = {
   EDIT_LOCAL: 'EDIT_LOCAL',
   ADD_THIS_BAG_TO_LOCAL: 'ADD_THIS_BAG_TO_LOCAL',
   CLEAR_REDUX_PERSIST_BAGS: 'CLEAR_REDUX_PERSIST_BAGS',
+  ADD_SOUNDS: 'ADD_SOUNDS',
 };
 
 export default localTypes;

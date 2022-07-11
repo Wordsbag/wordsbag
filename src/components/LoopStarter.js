@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   getFirstWord,
   nextStep,
@@ -11,17 +11,26 @@ import {
 import {useDispatch, useSelector} from 'react-redux';
 import {collection, query, where, getDocs, orderBy} from 'firebase/firestore';
 import {db} from '../firebase/utils';
-const mapState = ({loop}) => ({
+const mapState = ({loop, localReducer}) => ({
   ourStep: loop.ourStep,
   wordNow: loop.wordNow,
   errors: loop.errors,
   globalStep: loop.globalStep,
   wordsOfThisBag: loop.wordsOfThisBag,
+  loopCanStart: loop.loopCanStart,
+  myLocalBag: localReducer.bagItself,
 });
 
 const LoopStarter = () => {
-  const {ourStep, wordNow, globalStep, errors, wordsOfThisBag} =
-    useSelector(mapState);
+  const {
+    ourStep,
+    wordNow,
+    globalStep,
+    errors,
+    wordsOfThisBag,
+    myLocalBag,
+    loopCanStart,
+  } = useSelector(mapState);
   // const {wordsOfThisBag} = useSelector(mapState2);
   const dispatch = useDispatch();
   const startLoopHandler = () => {
@@ -29,7 +38,6 @@ const LoopStarter = () => {
     dispatch(getFirstWord(wordsOfThisBag));
     dispatch(goIntro());
   };
-
   // const getData = async () => {
   //   const IdUser = '4iJ22z4syzt2H2SyenPo';
   //   var arrayOfWordsId;
@@ -65,10 +73,10 @@ const LoopStarter = () => {
   // };
 
   useEffect(() => {
-    console.log('Hello This Is Our Bag Of Words =>', wordsOfThisBag);
+    console.log('Hello This Is Our Bag Of Words =>', loopCanStart);
 
     // loadWordsAndUpdateReduxState
-    dispatch(getData()).then(console.log('yesssss'));
+    dispatch(getData(myLocalBag)).then(console.log('yesssss'));
   }, []);
   useEffect(() => {
     console.log('wordsOfThisBag', wordsOfThisBag);
@@ -77,8 +85,15 @@ const LoopStarter = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.headerText}>LoopStarter</Text>
-      <TouchableOpacity onPress={startLoopHandler} style={styles.btnGo}>
-        <Text style={styles.btnGoText}>GO Ahead</Text>
+      <TouchableOpacity
+        disabled={!loopCanStart}
+        onPress={startLoopHandler}
+        style={styles.btnGo}>
+        {loopCanStart ? (
+          <Text style={styles.btnGoText}>GO Ahead</Text>
+        ) : (
+          <Text style={styles.btnGoText}>Loading</Text>
+        )}
       </TouchableOpacity>
     </View>
   );
@@ -101,7 +116,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   container: {
-    fle: 1,
+    flex: 1,
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',

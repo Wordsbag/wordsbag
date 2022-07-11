@@ -15,6 +15,7 @@ import {
   addWordToBag,
   removeWordFromBag,
 } from '../../redux/WordBag/wordbag.actions';
+import {COLORS} from '../../constants';
 
 const mapState = ({wordBagReducer}) => ({
   wordsBag: wordBagReducer.wordsBag,
@@ -107,15 +108,15 @@ export default WordCard;
 
 const styles = StyleSheet.create({
   myCard: {
-    backgroundColor: '#03045e',
+    // backgroundColor: '#03045e',
+    backgroundColor: COLORS.counter,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 0,
     marginBottom: 15,
     paddingVertical: 20,
     paddingHorizontal: 10,
-    width: '90%',
-    marginHorizontal: windowWidth / 20,
+    width: '100%',
     borderRadius: 20,
   },
   firstWord: {

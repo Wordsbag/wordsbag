@@ -261,3 +261,78 @@ timer get the date
   // Update the progress bars with data of steps reached in the local :
       lets say that there is 5 steps so 1*20 to extract the percentage value of the step // Done
   // Go To The Loop
+
+
+  from the home screen how we will go to the loop screen : {
+    1 - get the current loop id
+    2 - get the words of this loop
+    3 - get the step of this loop
+    4 - load the images and audios of this loop
+    5 - start the loop
+  }
+
+  Loop : {
+    4 * 3 words
+    word Intro
+    Word card builder
+    Word From Scratch
+    Word Outro
+    Word 3 +
+    Word 12 +
+    Math Focus Test
+    Ads After Each 3
+  }
+  
+
+  Steps Of the loop : {
+    first step = 3 first words
+    second step = 3 second words
+    third step = 3 third words
+    fourth step = 3 fourth words
+  }
+
+  Statistic Of the loop : {
+    we can say : 
+    -1- seeing every word two time 
+    -2- practice 2 test per word
+    -3- complete all 4 extra test
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LocalLoop:{
+  loopId,
+  wordsIds:[],
+  stepReached,
+}

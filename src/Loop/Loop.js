@@ -19,56 +19,72 @@ import {
   nextWord,
   stepReset,
 } from '../redux/Loop/loop.actions';
-import {useSelector} from 'react-redux';
+import {addSoundsToBag} from '../redux/Local/local.actions';
+import {useDispatch, useSelector} from 'react-redux';
 import LoopStarter from '../components/LoopStarter';
 import WordOutro from '../components/WordOutro';
 import BetweenThree from '../components/BetweenThree';
 import FinalLoopScreen from '../components/FinalLoopScreen';
 import Sound from 'react-native-sound';
 import {COLORS} from '../constants';
-const mapState = ({loop}) => ({
+const mapState = ({loop, localReducer}) => ({
   ourStep: loop.ourStep,
   wordNow: loop.wordNow,
   errors: loop.errors,
   globalStep: loop.globalStep,
   myWordIndice: loop.myWordIndice,
+  loadSound: localReducer.loadSound,
+  bagSounds: localReducer.bagSounds,
 });
 
 const Loop = () => {
   const [ourAudio, setOurAudio] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   // Audio File Handling
-  if (!isLoaded) {
-    var audio = new Sound(
-      'https://firebasestorage.googleapis.com/v0/b/taxproject-3635f.appspot.com/o/audio%2FBoondoggle.mp3?alt=media&token=e9a0faed-3528-4d0a-ac07-cd66cadb3656',
-      null,
-      error => {
-        if (error) {
-          console.log('failed to load the sound', error);
-          return;
-        }
-        // if loaded successfully
-        console.log(
-          'duration in seconds: ' +
-            audio.getDuration() +
-            'number of channels: ' +
-            audio.getNumberOfChannels(),
-        );
-        console.log('our sound is => ', audio);
-        setOurAudio(audio);
-        setIsLoaded(true);
-      },
-    );
-  }
+  // if (!isLoaded) {
+  //   var audio = new Sound(
+  //     'https://firebasestorage.googleapis.com/v0/b/taxproject-3635f.appspot.com/o/audio%2FBoondoggle.mp3?alt=media&token=e9a0faed-3528-4d0a-ac07-cd66cadb3656',
+  //     null,
+  //     error => {
+  //       if (error) {
+  //         console.log('failed to load the sound', error);
+  //         return;
+  //       }
+  //       // if loaded successfully
+  //       console.log(
+  //         'duration in seconds: ' +
+  //           audio.getDuration() +
+  //           'number of channels: ' +
+  //           audio.getNumberOfChannels(),
+  //       );
+  //       console.log('our sound is => ', audio);
+  //       setOurAudio(audio);
+  //       setIsLoaded(true);
+  //     },
+  //   );
+  // }
   const getAudioFilesOfWordsOfThisLoop = () => {};
-  const {ourStep, wordNow, globalStep, errors, myWordIndice} =
-    useSelector(mapState);
+  const {
+    ourStep,
+    wordNow,
+    globalStep,
+    errors,
+    myWordIndice,
+    loadSound,
+    bagSounds,
+  } = useSelector(mapState);
 
   const [first, setfirst] = useState(1);
+  const dispatch = useDispatch();
   useEffect(() => {
     console.log('from Loop Container =>', globalStep);
   }, [ourStep]);
-
+  useEffect(() => {
+    console.log('loadSound => ', loadSound);
+    if (!loadSound) {
+      dispatch(addSoundsToBag());
+    }
+  }, []);
   return (
     <View style={styles.container}>
       {/* <Image
@@ -128,7 +144,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    backgroundColor: COLORS.background,
+    backgroundColor: COLORS.progBar2,
     paddingTop: 0,
   },
 });

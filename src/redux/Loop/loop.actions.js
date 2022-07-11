@@ -151,23 +151,25 @@ export const getFirstWord = wordsOfThisBag => async dispatch => {
   });
 };
 
-export const getData = () => async dispatch => {
+export const getData = myLocalBag => async dispatch => {
   console.log('hello from redux "getData" function');
   const IdUser = '4iJ22z4syzt2H2SyenPo';
-  var arrayOfWordsId;
+  var arrayOfWordsId = myLocalBag;
   const arrayOfWordsOfThisBag = [];
-  const q = query(
-    collection(db, 'sessionWords', IdUser, 'sessionsWordsOfThisUser'),
-    where('stepReached', '==', 8),
-  );
 
-  const querySnapshot = await getDocs(q);
-  querySnapshot.forEach(doc => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log('the Words Id', ' => ', doc.data());
-    // arrayOfWordsId.push(doc.data().idsOfWordsToLearnNow);
-    arrayOfWordsId = doc.data().idsOfWordsToLearnNow;
-  });
+  // *** Getting data from firebase
+  // const q = query(
+  //   collection(db, 'sessionWords', IdUser, 'sessionsWordsOfThisUser'),
+  //   where('stepReached', '==', 8),
+  // );
+
+  // const querySnapshot = await getDocs(q);
+  // querySnapshot.forEach(doc => {
+  //   // doc.data() is never undefined for query doc snapshots
+  //   console.log('the Words Id', ' => ', doc.data());
+  //   // arrayOfWordsId.push(doc.data().idsOfWordsToLearnNow);
+  //   arrayOfWordsId = doc.data().idsOfWordsToLearnNow;
+  // });
   try {
     console.log('arrayOfWordsId', arrayOfWordsId);
     // arrayOfWordsId.forEach(async item => {
@@ -187,6 +189,10 @@ export const getData = () => async dispatch => {
     dispatch({
       type: loopTypes.SET_WORDS_BAG,
       payload: arrayOfWordsOfThisBag,
+    });
+    dispatch({
+      type: loopTypes.LOOP_CAN_START,
+      payload: true,
     });
     // });
   } catch (err) {

@@ -19,6 +19,7 @@ import {
 } from '../redux/Loop/loop.actions';
 import {useDispatch, useSelector} from 'react-redux';
 import LottieView from 'lottie-react-native';
+import {COLORS} from '../constants';
 const mapState = ({loop}) => ({
   ourStep: loop.ourStep,
   wordNow: loop.wordNow,
@@ -140,7 +141,7 @@ const WordIntro = ({ourAudio}) => {
         ref={animElement}
         source={require('../assets/animations/lottieanim.json')}
         autoPlay
-        loop
+        loop={false}
         style={{
           width: '100%',
           height: '100%',
@@ -221,7 +222,7 @@ const styles = StyleSheet.create({
   },
   wordTolearn: {
     fontSize: 50,
-    color: 'white',
+    color: COLORS.black,
   },
   languageFlagImg: {
     width: 30,
@@ -235,7 +236,7 @@ const styles = StyleSheet.create({
   },
   languageName: {
     fontSize: 20,
-    color: 'white',
+    color: COLORS.black,
   },
   btnNextText: {
     textAlign: 'center',

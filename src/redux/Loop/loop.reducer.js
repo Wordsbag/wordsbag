@@ -7,6 +7,7 @@ const INITIAL_STATE = {
   wordsOfThisBag: [],
   globalStep: 1,
   myWordIndice: 0,
+  loopCanStart: false,
 };
 
 const loopReducer = (state = INITIAL_STATE, action) => {
@@ -78,6 +79,11 @@ const loopReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         wordsOfThisBag: action.payload,
+      };
+    case loopTypes.LOOP_CAN_START:
+      return {
+        ...state,
+        loopCanStart: action.payload,
       };
     default:
       return state;

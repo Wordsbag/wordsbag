@@ -33,7 +33,7 @@ const ProgressIndicator = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.progressWrapper}>
+      {/* <View style={styles.progressWrapper}>
         <View style={styles.progBarExternStyle}>
           <Animated.View
             style={[
@@ -42,22 +42,28 @@ const ProgressIndicator = () => {
                 width: progressAnim,
               },
             ]}></Animated.View>
-        </View>
+        </View> */}
 
-        <View style={styles.externStepsIndicatoView}>
+      {/* <View style={styles.externStepsIndicatoView}>
           <Text style={styles.externStepsIndicatoText}>
             {Math.floor(wordIndice / 4) + 1}/4
           </Text>
+        </View> */}
+      {/* </View> */}
+      <View style={styles.progressWrapper}>
+        <View style={[styles.progrBarElement, styles.niceprogrBarElementColor]}>
+          <Animated.View
+            style={[
+              styles.progrBarElementIntern,
+              styles.niceProgBarColorIntern,
+              {width: progressAnim},
+            ]}></Animated.View>
         </View>
-      </View>
-
-      <View style={[styles.progrBarElement, styles.niceprogrBarElementColor]}>
-        <View
-          style={[
-            styles.progrBarElementIntern,
-            styles.niceProgBarColorIntern,
-            {width: `10%`},
-          ]}></View>
+        {/* <View style={styles.externStepsIndicatoView}>
+          <Text style={styles.externStepsIndicatoText}>
+            {Math.floor(wordIndice / 4) + 1}/4
+          </Text>
+        </View> */}
       </View>
 
       {/* <TouchableOpacity onPress={handleNext} style={styles.buttonStyle}>
@@ -71,11 +77,11 @@ export default ProgressIndicator;
 
 const styles = StyleSheet.create({
   niceProgBarColorIntern: {
-    backgroundColor: COLORS.progBar1,
+    backgroundColor: COLORS.black,
     width: '100%',
   },
   niceprogrBarElementColor: {
-    borderColor: COLORS.progBar1,
+    borderColor: COLORS.black,
   },
   progrBarElementIntern: {
     height: 5,
@@ -87,10 +93,10 @@ const styles = StyleSheet.create({
   },
 
   progrBarElement: {
-    width: '100%',
+    width: '70%',
     height: 5,
-    backgroundColor: COLORS.border,
-    position: 'relative',
+    backgroundColor: COLORS.white,
+    // position: 'relative',
     borderRadius: 4,
     borderWidth: 0,
 
@@ -114,16 +120,16 @@ const styles = StyleSheet.create({
   externStepsIndicatoView: {
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 6,
+    borderWidth: 3,
     borderColor: '#FFB552',
-    width: 80,
-    height: 80,
-    borderRadius: 40,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     marginLeft: 20,
   },
   externStepsIndicatoText: {
     color: '#fff',
-    fontSize: 24,
+    fontSize: 16,
   },
   buttonStyle: {
     backgroundColor: 'red',
@@ -147,6 +153,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     // backgroundColor: '#bcd25a',
+    paddingTop: 20,
     paddingVertical: 15,
   },
 });

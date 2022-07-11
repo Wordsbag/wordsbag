@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
   },
 
   actionBtnText: {
-    color: '#fff',
+    color: COLORS.btnTxt,
     fontSize: 18,
     fontWeight: '500',
     textTransform: 'uppercase',
@@ -364,7 +364,7 @@ const styles = StyleSheet.create({
     height: 50,
   },
   container: {
-    backgroundColor: COLORS.white,
+    // backgroundColor: COLORS.background,
     width: '90%',
     // borderWidth: 2,
     // borderColor: COLORS.border,

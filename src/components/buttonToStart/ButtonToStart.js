@@ -40,7 +40,7 @@ const ButtonToStart = () => {
     console.log('added => ', wordsBagAddedId);
     if (wordsBagAddedSuccess) {
       if (wordsBagAddedId !== '') {
-        dispatch(addThisBagToLocal(wordsBagAddedId));
+        dispatch(addThisBagToLocal(wordsBagAddedId, wordsBag));
       }
     }
   }, [wordsBagAddedId]);
